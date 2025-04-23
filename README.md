@@ -20,4 +20,4 @@ A responsive job portal website built with Flask, Bootstrap, and modern web tech
 1. Clone this repository
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run the application: `python main.py`
-4. Access at http://localhost:5000
+
