@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Find Worker - Profile{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container hero-content">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4 mb-4">My Profile</h1>
+                <p class="lead mb-4">Manage your account and personal information</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Profile Content -->
+<section class="section-padding">
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-body p-4 p-md-5 text-center">
+                <i class="fas fa-user-circle fa-5x text-primary mb-4"></i>
+                <h3 class="mb-3">Welcome to your profile!</h3>
+                <p class="lead mb-4">This is a placeholder for your profile page. In a complete version, you would see your personal information and job preferences here.</p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Return Home</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

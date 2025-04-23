@@ -1,0 +1,291 @@
+{% extends "base.html" %}
+
+{% block title %}JobConnect - Pricing Plans{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4 fw-bold mb-4">Simple, Transparent Pricing</h1>
+                <p class="lead mb-4">Choose the plan that's right for you or your organization</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <ul class="nav nav-pills justify-content-center mb-4" id="pricingTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active px-4" id="job-seekers-tab" data-bs-toggle="pill" data-bs-target="#job-seekers-pricing" type="button" role="tab" aria-controls="job-seekers-pricing" aria-selected="true">For Job Seekers</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link px-4" id="recruiters-tab" data-bs-toggle="pill" data-bs-target="#recruiters-pricing" type="button" role="tab" aria-controls="recruiters-pricing" aria-selected="false">For Recruiters</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="pricingTabsContent">
+                    <!-- Job Seekers Pricing -->
+                    <div class="tab-pane fade show active" id="job-seekers-pricing" role="tabpanel" aria-labelledby="job-seekers-tab">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="card-title fw-bold mb-0">Basic</h5>
+                                        <p class="text-muted mb-3">For those just starting out</p>
+                                        <div class="py-3">
+                                            <h2 class="mb-0 fw-bold">Free</h2>
+                                            <p class="text-muted mb-0">Forever</p>
+                                        </div>
+                                        <hr>
+                                        <ul class="list-unstyled mb-4 text-start">
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Basic profile</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Up to 3 job applications per day</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Job search</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Email notifications</li>
+                                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i> Priority visibility</li>
+                                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i> Featured profile</li>
+                                        </ul>
+                                        <div class="d-grid">
+                                            <a href="{{ url_for('job_seekers') }}" class="btn btn-outline-primary">Sign Up Free</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-primary">
+                                    <div class="card-header text-center bg-primary text-white py-3">
+                                        <h6 class="mb-0">Most Popular</h6>
+                                    </div>
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="card-title fw-bold mb-0">Professional</h5>
+                                        <p class="text-muted mb-3">For serious job seekers</p>
+                                        <div class="py-3">
+                                            <h2 class="mb-0 fw-bold">$9.99</h2>
+                                            <p class="text-muted mb-0">per month</p>
+                                        </div>
+                                        <hr>
+                                        <ul class="list-unstyled mb-4 text-start">
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Enhanced profile</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Unlimited job applications</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Advanced job search</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Priority email notifications</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Priority visibility</li>
+                                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i> Featured profile</li>
+                                        </ul>
+                                        <div class="d-grid">
+                                            <a href="#" class="btn btn-primary">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="card-title fw-bold mb-0">Premium</h5>
+                                        <p class="text-muted mb-3">For career professionals</p>
+                                        <div class="py-3">
+                                            <h2 class="mb-0 fw-bold">$19.99</h2>
+                                            <p class="text-muted mb-0">per month</p>
+                                        </div>
+                                        <hr>
+                                        <ul class="list-unstyled mb-4 text-start">
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Premium profile</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Unlimited job applications</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Advanced job search</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Real-time notifications</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Priority visibility</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Featured profile</li>
+                                        </ul>
+                                        <div class="d-grid">
+                                            <a href="#" class="btn btn-outline-primary">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recruiters Pricing -->
+                    <div class="tab-pane fade" id="recruiters-pricing" role="tabpanel" aria-labelledby="recruiters-tab">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="card-title fw-bold mb-0">Starter</h5>
+                                        <p class="text-muted mb-3">For small businesses</p>
+                                        <div class="py-3">
+                                            <h2 class="mb-0 fw-bold">$49</h2>
+                                            <p class="text-muted mb-0">per month</p>
+                                        </div>
+                                        <hr>
+                                        <ul class="list-unstyled mb-4 text-start">
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 5 job postings</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Basic candidate search</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Company profile</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Email support</li>
+                                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i> Featured job posts</li>
+                                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i> Advanced analytics</li>
+                                        </ul>
+                                        <div class="d-grid">
+                                            <a href="{{ url_for('recruiters') }}" class="btn btn-outline-primary">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-primary">
+                                    <div class="card-header text-center bg-primary text-white py-3">
+                                        <h6 class="mb-0">Most Popular</h6>
+                                    </div>
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="card-title fw-bold mb-0">Business</h5>
+                                        <p class="text-muted mb-3">For growing companies</p>
+                                        <div class="py-3">
+                                            <h2 class="mb-0 fw-bold">$99</h2>
+                                            <p class="text-muted mb-0">per month</p>
+                                        </div>
+                                        <hr>
+                                        <ul class="list-unstyled mb-4 text-start">
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 15 job postings</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Advanced candidate search</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Enhanced company profile</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Priority support</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Featured job posts</li>
+                                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i> Advanced analytics</li>
+                                        </ul>
+                                        <div class="d-grid">
+                                            <a href="#" class="btn btn-primary">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="card-title fw-bold mb-0">Enterprise</h5>
+                                        <p class="text-muted mb-3">For large organizations</p>
+                                        <div class="py-3">
+                                            <h2 class="mb-0 fw-bold">$199</h2>
+                                            <p class="text-muted mb-0">per month</p>
+                                        </div>
+                                        <hr>
+                                        <ul class="list-unstyled mb-4 text-start">
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Unlimited job postings</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Premium candidate search</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Premium company profile</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Dedicated account manager</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Featured job posts</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Advanced analytics</li>
+                                        </ul>
+                                        <div class="d-grid">
+                                            <a href="#" class="btn btn-outline-primary">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p class="lead">Find answers to common questions about our pricing and features</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="pricingFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Can I change my plan later?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Yes, you can upgrade or downgrade your plan at any time. When upgrading, you'll be charged the prorated difference for the remainder of your billing cycle. When downgrading, the new rate will take effect at the start of your next billing cycle.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Do you offer a free trial?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Yes, we offer a 14-day free trial for all paid plans. You can explore all the premium features during your trial period before committing to a subscription. No credit card is required to start your trial.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How do I cancel my subscription?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                You can cancel your subscription at any time from your account settings. Go to "Account" > "Subscription" and click on "Cancel Subscription." Your access will continue until the end of your current billing period.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Do you offer any discounts?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                We offer discounts for annual billing (save 20% compared to monthly billing) and special pricing for startups, nonprofits, and educational institutions. Contact our sales team for more information on qualifying for these discounts.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                What payment methods do you accept?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and bank transfers for annual enterprise plans. All payments are processed securely through our payment provider.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="fw-bold mb-4">Ready to get started with JobConnect?</h2>
+                <p class="lead mb-4">Join thousands of job seekers and recruiters who use our platform every day.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="{{ url_for('job_seekers') }}" class="btn btn-light btn-lg">For Job Seekers</a>
+                    <a href="{{ url_for('recruiters') }}" class="btn btn-outline-light btn-lg">For Recruiters</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
